@@ -1,0 +1,92 @@
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* display none until init */
+.owl-carousel{
+	display: none;
+	position: relative;
+	width: 100%;
+	-ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper{
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+.owl-carousel .owl-item{
+	float: left;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
+	cursor: pointer;
+}
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#owl-demo .item{display: block;margin: 10px;}
+.owl-theme .owl-controls .owl-buttons div { position: absolute;}
+.owl-theme .owl-controls .owl-buttons .owl-prev{background: url(../image/slide-arrow.png) no-repeat scroll left top; height: 30px; left: 20px; top: 165px; width: 16px; }
+.owl-theme .owl-controls .owl-buttons .owl-next{background: url(../image/slide-arrow.png) no-repeat scroll -16px top; height: 30px; right: 20px; top: 165px; width: 16px;}
+#owl-demo .owl-pagination{display:none;}
+
+#tinerary_day .owl-prev, #Addons_panel .owl-prev{background: url(../image/slide-arrow-tinerary.png) no-repeat scroll left top; border-radius: 0; height: 30px; left: -21px; top:47%; width: 36px; }
+#tinerary_day .owl-next, #Addons_panel .owl-next{background: url(../image/slide-arrow-tinerary.png) no-repeat scroll -37px top; border-radius: 0; height: 30px; right: -21px; top:47%; width: 36px;}
+#tinerary_day .owl-pagination, #Addons_panel .owl-pagination{display:none;}
+#tinerary_day .owl-buttons, #Addons_panel .owl-buttons  { /*position: absolute; */right: 0; top: 0; width: 100%; height: 100%;}
+
+#photo_gall{width:90%;float: left;}
+#video_gall{width:90%;float: left;}
+#photo_gall .owl-prev, #video_gall .owl-prev{background: url(../image/explore/arrow-bttn-explor.png) no-repeat scroll left top; border-radius: 0; height: 28px; left: 1px; top: -5px; width: 22px; }
+#photo_gall .owl-next, #video_gall .owl-next{background: url(../image/explore/arrow-bttn-explor.png) no-repeat scroll left -30px; border-radius: 0; height: 28px; right: -33px; top: 27px; width: 22px;}
+#photo_gall .owl-pagination, #video_gall .owl-pagination{display:none;}
+#photo_gall .owl-buttons, #video_gall .owl-buttons{ position: absolute; right: 0; top: 0;}
+
+/* mouse grab icon */
+.grabbing { cursor:url(grabbing.png) 8 8, move;}
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+}
+@media (max-width: 768px) {
+.owl-theme .owl-controls .owl-buttons .owl-prev{top:54px;}
+.owl-theme .owl-controls .owl-buttons .owl-next{top:54px;}
+}
+@media (max-width: 520px) {
+.owl-theme .owl-controls .owl-buttons .owl-prev{left:0px;}
+.owl-theme .owl-controls .owl-buttons .owl-next{right:0px;}
+}
